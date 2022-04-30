@@ -1,0 +1,21 @@
+.slides {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background: var(--color-bg);
+  display: block;
+  justify-content: center;
+  /* height: 20rem; */
+  border-radius: 2rem;
+}
+
+.slides .img {
+  aspect-ratio: 1/1;
+  width: 20%;
+  height: 30%;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.myslider {
+  width: 50%;
+}

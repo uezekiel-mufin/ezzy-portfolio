@@ -1,0 +1,44 @@
+.primary__container {
+  margin-left: 2rem;
+  display: Grid;
+  grid-template-columns: 40% 58%;
+  grid-gap: 1rem;
+}
+.contact__media {
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--color-white);
+  margin-bottom: 3rem;
+  text-align: center;
+  height: max-content;
+  display: flex;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(15px);
+  border-radius: 2rem;
+  width: 100%;
+}
+
+.contact__media:hover {
+  background: transparent;
+  transition: var(--transition);
+}
+
+.form {
+  display: flex;
+
+  flex-direction: column;
+  margin-left: 3rem;
+  padding: 2rem;
+}
+
+.grid__container {
+  display: flex;
+  justify-content: center;
+}
+
+.form .textField {
+  color: aliceblue;
+  border-color: blueviolet;
+}

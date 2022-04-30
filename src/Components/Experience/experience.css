@@ -1,0 +1,33 @@
+.experience__container {
+  margin-left: 50rem;
+  /* justify-items: center; */
+}
+.experience__skills {
+  background: var(--color-bg);
+  padding: 2.4rem 2rem;
+  border-radius: 2rem;
+  border: 1px solid var(--color-priamry-variant);
+  transition: var(--transition);
+}
+
+.experience__skills .typography {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+.experience__content-icons {
+  margin-top: 2px;
+  color: var(--color-primary);
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.section--hidden {
+  opacity: 0;
+  transition: var(--transition);
+  transform: translateY(8rem);
+}
