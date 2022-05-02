@@ -10,11 +10,9 @@ const HeadersSocials = () => {
       transition={{ duration: 3 }}
       initial={{ x: 0, y: 0 }}
       animate={{
-        x: 1100,
+        // x: 1100,
         y: -50,
         rotate: -90,
-        width: "max-content",
-        position: "right",
       }}
       className='header__socials'
     >

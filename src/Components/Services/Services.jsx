@@ -13,8 +13,20 @@ import { motion } from "framer-motion";
 const Services = () => {
   return (
     <section id='services' className='services'>
-      <Typography variant='h5'>What I Offer</Typography>
-      <Typography variant='h2'>Services</Typography>
+      <motion.h5
+        transition={{ duration: 3 }}
+        initial={{ y: -500 }}
+        animate={{ y: 0 }}
+      >
+        What I Offer
+      </motion.h5>
+      <motion.h2
+        transition={{ duration: 3 }}
+        initial={{ y: 500 }}
+        animate={{ y: 0, scale: 1.5 }}
+      >
+        Services
+      </motion.h2>
 
       <Grid display='flex' container justifyContent='center' spacing={2}>
         <Grid item xs={12} sm={6} lg={3}>

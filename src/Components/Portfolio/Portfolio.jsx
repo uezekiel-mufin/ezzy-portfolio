@@ -31,72 +31,66 @@ const Portfolio = () => {
           Portfolio
         </motion.h2>
 
-        <motion.div
-          transition={{
-            duration: 3,
-            type: "spring",
-            // stiffness: 400,
-            // damping: 20,
-          }}
-          initial={{ y: -1000 }}
-          animate={{ y: -70, rotate: 360, scale: 0.9 }}
-        >
-          <Grid container spacing={4}>
-            {data.map((d, index) => (
-              <Grid
-                style={{ wrap: "wrap" }}
-                item
-                xs={12}
-                sm={12}
-                md={6}
-                lg={4}
-                key={index}
+        <Grid container spacing={0.5} display='flex' justifyContent='center'>
+          {data.map((d, index) => (
+            <Grid
+              display='flex'
+              item
+              xs={12}
+              sm={6}
+              md={3}
+              key={index}
+              style={{
+                background: "rgba(0, 0, 0, 0.3)",
+                color: "#fff",
+                padding: "2rem",
+                borderRadius: "2rem",
+                margin: "2rem",
+                width: "max-content",
+              }}
 
-                // style={{ padding: "4rem" }}
+              // style={{ padding: "4rem" }}
+            >
+              <motion.div
+                transition={{
+                  duration: 3,
+                  type: "spring",
+                }}
+                initial={{ y: -1000 }}
+                animate={{ y: -20, rotate: 360 }}
               >
-                <div
-                  style={{
-                    background: "rgba(0, 0, 0, 0.3)",
-                    color: "#fff",
-                    padding: "1.5rem",
-                    borderRadius: "2rem",
-                  }}
-                >
-                  <CardMedia
-                    component='img'
-                    src={d.image}
-                    alt={d.name}
-                    className='img'
-                  />
-                  <CardContent>
-                    <Typography variant='body2' className='typography'>
-                      {d.description}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button
-                      className='btn'
-                      variant='outlined'
-                      onClick={() => window.open(d.gitHub)}
-                    >
-                      Github
-                    </Button>
-                    <div style={{ flexGrow: "1" }}></div>
-
-                    <Button
-                      className='btn'
-                      variant='contained'
-                      color='secondary'
-                      onClick={() => window.open(d.liveDemo)}
-                    >
-                      Live Demo
-                    </Button>
-                  </CardActions>
-                </div>
-              </Grid>
-            ))}
-          </Grid>
-        </motion.div>
+                <CardMedia
+                  component='img'
+                  src={d.image}
+                  alt={d.name}
+                  className='img'
+                />
+                <CardContent>
+                  <Typography variant='body2' className='typography'>
+                    {d.description}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    className='btn'
+                    variant='outlined'
+                    onClick={() => window.open(d.gitHub)}
+                  >
+                    Github
+                  </Button>
+                  <Button
+                    className='btn'
+                    variant='contained'
+                    color='secondary'
+                    onClick={() => window.open(d.liveDemo)}
+                  >
+                    Live Demo
+                  </Button>
+                </CardActions>
+              </motion.div>
+            </Grid>
+          ))}
+        </Grid>
       </section>
     </>
   );

@@ -8,13 +8,13 @@ const data = [
     icon: <MarkunreadIcon />,
     name: "EMAIL",
     address: "geniuswealthb@gmail.com",
-    link: "geniuswealthb@gmail.com",
+    link: "mailto:geniuswealthb@gmail.com",
   },
   {
     icon: <WhatsAppIcon />,
     name: "WhatsApp",
     address: "+2348147576669",
-    link: "https://api.whatsapp.com/send?phone?+2347038240503",
+    link: "https://web.whatsapp.com/send?phone?+2347016966965",
   },
   {
     icon: <LinkedInIcon />,

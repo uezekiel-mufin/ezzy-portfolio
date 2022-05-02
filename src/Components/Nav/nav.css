@@ -2,7 +2,6 @@ nav {
   background: rgba(0, 0, 0, 0.3);
   width: max-content;
   padding: 0.7rem 0.7rem;
-  /* z-index: 2; */
   position: fixed;
   left: 5%;
   transform: translate(-50%);

@@ -1,7 +1,7 @@
 .primary__container {
   margin-left: 2rem;
   display: Grid;
-  grid-template-columns: 40% 58%;
+  grid-template-columns: 40% 60%;
   grid-gap: 1rem;
 }
 .contact__media {
@@ -11,8 +11,9 @@
   text-align: center;
   height: max-content;
   display: flex;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  justify-content: center;
+  /* padding-left: 1rem;
+  padding-right: 2rem; */
   padding: 1rem;
   border-radius: 2rem;
   backdrop-filter: blur(15px);
@@ -27,18 +28,14 @@
 
 .form {
   display: flex;
-
+  margin-right: 2rem;
   flex-direction: column;
-  margin-left: 3rem;
+  margin-left: 1rem;
   padding: 2rem;
 }
 
-.grid__container {
-  display: flex;
-  justify-content: center;
-}
-
-.form .textField {
-  color: aliceblue;
-  border-color: blueviolet;
+.error {
+  color: #ff3f34;
+  display: block;
+  padding: 2px 0;
 }

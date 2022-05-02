@@ -46,10 +46,10 @@ const Header = () => {
     <>
       <ThemeProvider theme={theme}>
         <motion.div
-          transition={{ duration: 3 }}
-          initial={{ x: 0 }}
-          animate={{ x: -200 }}
-          exit={{ x: "1000vw" }}
+          // transition={{ duration: 3 }}
+          // initial={{ x: 0 }}
+          // animate={{ x: -200 }}
+          // exit={{ x: "1000vw" }}
           className='container header__container'
         >
           <motion.h3
@@ -64,7 +64,6 @@ const Header = () => {
             initial={{ y: -1000 }}
             animate={{ y: 0 }}
           >
-            {" "}
             I am
           </motion.h5>
           <motion.h1

@@ -6,6 +6,30 @@
   font-size: 1rem;
 }
 
-section {
+/* section {
   padding: 0 10rem 10rem 10rem;
+} */
+
+/* .slides .img {
+  aspect-ratio: 1/1;
+  width: 20%;
+  height: 30%;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+} */
+
+.myslider {
+  width: 50%;
+}
+.slides {
+  /* padding: 2rem; */
+  /* margin-bottom: 2rem; */
+  background: var(--color-bg);
+  /* display: block; */
+  justify-content: center;
+  /* height: 20rem; */
+  border-radius: 2rem;
+}
+.slide {
+  scale: 50%;
 }

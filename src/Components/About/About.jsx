@@ -13,10 +13,20 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <section id='about'>
-      <motion.h5 transition={{ duration: 1.5 }} whileHover={{ scale: 1.7 }}>
+      <motion.h5
+        transition={{ duration: 1.5 }}
+        initial={{ x: -1000 }}
+        animate={{ x: 0 }}
+        whileHover={{ scale: 1.7 }}
+      >
         Get to know
       </motion.h5>
-      <motion.h2 transition={{ duration: 1.5 }} whileHover={{ scale: 1.7 }}>
+      <motion.h2
+        transition={{ duration: 1.5 }}
+        initial={{ x: 1000 }}
+        animate={{ x: 0 }}
+        whileHover={{ scale: 1.7 }}
+      >
         About Me
       </motion.h2>
 

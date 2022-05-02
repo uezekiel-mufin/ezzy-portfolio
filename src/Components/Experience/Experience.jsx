@@ -19,21 +19,19 @@ const Experience = () => {
   return (
     <>
       <AnimatePresence>
-        <motion.section
-          transition={{ duration: 3 }}
-          initial={{ x: 0 }}
-          exit={{ x: 1000 }}
-          id='experience'
-          ref={ref}
-        >
-          <motion.h5 transition={{ type: "spring", stiffness: 300 }}>
+        <motion.section exit={{ x: 1000 }} id='experience' ref={ref}>
+          <motion.h5
+            transition={{ duration: 3 }}
+            initial={{ y: -500 }}
+            animate={{ y: 0 }}
+          >
             What Skills I have
           </motion.h5>
           <motion.h2
             transition={{ duration: 3 }}
-            initial={{ x: -1000 }}
-            animate={{ x: 0 }}
-            whileHover={{ scale: 1.2, color: "white" }}
+            initial={{ y: 500 }}
+            animate={{ y: 0, scale: 2 }}
+            whileHover={{ color: "white" }}
           >
             My Experience
           </motion.h2>
@@ -61,6 +59,8 @@ const Experience = () => {
                     <Grid
                       item
                       xs={12}
+                      sm={12}
+                      md={6}
                       lg={6}
                       key={index}
                       style={{
@@ -98,7 +98,7 @@ const Experience = () => {
               </motion.div>
             </Grid>
 
-            <Grid item xs={8} lg={4}>
+            <Grid item xs={12} sm={6} lg={4}>
               <motion.div
                 className='experience__skills'
                 transition={{ duration: 2 }}
@@ -114,6 +114,8 @@ const Experience = () => {
                       key={index}
                       item
                       xs={12}
+                      sm={12}
+                      md={6}
                       lg={6}
                       style={{
                         display: "grid",
