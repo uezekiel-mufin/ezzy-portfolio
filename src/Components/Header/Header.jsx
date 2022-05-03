@@ -1,28 +1,13 @@
 import React from "react";
 import "./header.css";
 import CTA from "./CTA";
-import Me2 from "../../assests/Me2.jpg";
-import HeadersSocials from "./HeadersSocials";
+// import HeadersSocials from "./HeadersSocials";
 import { motion } from "framer-motion";
-import {
-  Grid,
-  Card,
-  CardMedia,
-  CardContent,
-  CardActions,
-  CardHeader,
-  IconButton,
-  ShareIcon,
-  FavoriteIcon,
-  Link,
-  Typography,
-  Paper,
-  Box,
-  ThemeProvider,
-  createTheme,
-} from "@mui/material";
-import Avatar from "@mui/material/Avatar";
-
+import { ThemeProvider, createTheme, Grid, Button } from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import { Link } from "react-router-dom";
 const theme = createTheme({
   palette: {
     background: {
@@ -45,44 +30,87 @@ const Header = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <motion.div
-          // transition={{ duration: 3 }}
-          // initial={{ x: 0 }}
-          // animate={{ x: -200 }}
-          // exit={{ x: "1000vw" }}
-          className='container header__container'
+        <Grid
+          container
+          display='flex'
+          // justifyContent='center'
+          spacing={1}
+          flexDirection='row'
+          style={{ padding: "5rem", marginTop: "3rem" }}
         >
-          <motion.h3
-            transition={{ duration: 2 }}
-            initial={{ y: -1000 }}
-            animate={{ y: 0 }}
+          <Grid
+            item
+            className='container'
+            display='grid'
+            flexDirection='column'
+            justifyContent='center'
+            style={{ margin: "5rem 0 0 3rem" }}
+            sm={6}
           >
-            Hello Welcome,
-          </motion.h3>
-          <motion.h5
-            transition={{ duration: 2 }}
-            initial={{ y: -1000 }}
-            animate={{ y: 0 }}
+            <motion.h5
+              transition={{ duration: 3 }}
+              initial={{ x: 1000 }}
+              animate={{ x: 0, y: -30 }}
+            >
+              Welcome
+            </motion.h5>
+            <motion.h5
+              transition={{ duration: 3 }}
+              initial={{ x: 1000 }}
+              animate={{ x: 0, y: -30 }}
+            >
+              My name is
+            </motion.h5>
+            <motion.h2
+              transition={{ duration: 3 }}
+              initial={{ x: 1000 }}
+              animate={{ x: 0, scale: 2.5 }}
+            >
+              Ezekiel Udiomuno
+            </motion.h2>
+            <motion.h5
+              transition={{ duration: 3 }}
+              initial={{ x: 1000 }}
+              animate={{ x: 0, scale: 1.5 }}
+            >
+              A Front-End Web Developer
+            </motion.h5>
+            <CTA />
+          </Grid>
+          <Grid
+            item
+            display='flex'
+            flexDirection={{ xs: "row", sm: "column", lg: "column" }}
+            justifyContent='center'
+            style={{ margin: "0 0 0 5rem" }}
+            // sm={6}
           >
-            I am
-          </motion.h5>
-          <motion.h1
-            transition={{ duration: 1.5 }}
-            initial={{ x: 1000 }}
-            animate={{ x: 0 }}
-          >
-            Ezekiel Udiomuno
-          </motion.h1>
-          <motion.h5
-            transition={{ duration: 1.5 }}
-            initial={{ x: -1000 }}
-            animate={{ x: 0 }}
-          >
-            A Front-End Web Developer
-          </motion.h5>
-          <HeadersSocials />
-          <CTA />
-        </motion.div>
+            <a
+              href='https://linkedin.com'
+              className='links'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <LinkedInIcon />
+            </a>
+            <a
+              href='https://github.com'
+              className='links'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <GitHubIcon />
+            </a>
+            <a
+              href='https://twitter.com'
+              className='links'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <TwitterIcon />
+            </a>
+          </Grid>
+        </Grid>
       </ThemeProvider>
     </>
   );

@@ -1,23 +1,23 @@
 .container {
-  height: 100vh;
-  padding-top: 2rem;
+  /* height: 100vh;
+  padding-top: 2rem; */
   color: var(--color-white);
-  top: 10vw;
+  /* top: 10vw;
   bottom: 40vw;
-  font-size: 150%;
+  font-size: 150%; */
 }
 
 /*-----------cta------------*/
 .cta {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   display: flex;
   gap: 2rem;
   justify-content: center;
 }
 
 /*-----------header socials------------*/
-
+/* 
 .header__socials {
   background: rgba(0, 0, 0, 0.3);
   padding: 0.7rem 1.7rem;
@@ -38,6 +38,22 @@
   height: 3rem;
   color: var(--color-primary);
   visibility: visible;
+} */
+
+.links {
+  margin: 1rem;
 }
 
-/*----------------ME-----------------*/
+h2 {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-weight: bolder;
+  font-size: larger;
+}
+h5 {
+  text-align: center;
+  color: var(--color-light);
+}

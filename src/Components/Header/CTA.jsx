@@ -7,30 +7,12 @@ import { Link } from "react-router-dom";
 const CTA = () => {
   return (
     <div className='cta'>
-      <motion.div
-        transition={{ duration: 2 }}
-        initial={{ y: 1000 }}
-        animate={{ y: 0 }}
-        whileHover={{
-          scale: 1.4,
-          textShadow: "0px 0px 8px rgb(255,255,255S)",
-          boxShadow: "0px 0px 8px rgb(255,255,255S)",
-        }}
-      >
+      <motion.div>
         <Button variant='outlined' href={CV} download className='btn'>
           Download CV
         </Button>
       </motion.div>
-      <motion.div
-        transition={{ duration: 2 }}
-        initial={{ y: 1000 }}
-        animate={{ y: 0 }}
-        whileHover={{
-          scale: 1.4,
-          textShadow: "0px 0px 8px rgb(255,255,255S)",
-          boxShadow: "0px 0px 8px rgb(255,255,255S)",
-        }}
-      >
+      <motion.div>
         <Button
           LinkComponent={Link}
           to='/contact'
