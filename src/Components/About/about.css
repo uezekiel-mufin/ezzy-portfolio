@@ -1,6 +1,9 @@
 section {
   height: 100vh;
 }
+.about__scetion {
+  margin-left: 10rem;
+}
 .about__me {
   border-radius: 2rem;
   background: linear-gradient(

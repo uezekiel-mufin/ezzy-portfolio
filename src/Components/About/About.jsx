@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id='about'>
+    <section id='about' className='about__section'>
       <motion.h5
         transition={{ duration: 1.5 }}
         initial={{ x: -1000 }}
@@ -34,7 +34,7 @@ const About = () => {
         <Grid container spacing={4}>
           <Grid item xs={12} sm={6} lg={6}>
             <motion.div
-              transition={{ duration: 1.5 }}
+              transition={{ duration: 2.5 }}
               initial={{ x: 1000 }}
               animate={{ x: 0, rotate: 720 }}
               className='about__me'
@@ -71,10 +71,11 @@ const About = () => {
                   animate={{ x: 0 }}
                   whileHover={{ scale: 1.1 }}
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Suscipit, eveniet ex laborum aliquid doloribus vitae obcaecati
-                  repudiandae numquam et cum mollitia perferendis? Natus ipsa
-                  aut ea doloribus odio alias tempora?
+                  I am a self taught developer, that derives joy in giving the
+                  customer a beautiful interface and an awesome experience
+                  whenever they visit my work. I am motivated to contribute my
+                  own quota to the tech industry and hopefully leave a mark in
+                  the sands of time.
                 </motion.p>
                 <motion.div
                   transition={{ duration: 1.2 }}

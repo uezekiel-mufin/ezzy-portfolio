@@ -70,8 +70,13 @@ const Contact = () => {
         Contact Me
       </motion.h2>
       <div className='primary__container'>
-        <Grid container style={{ padding: "1rem" }}>
-          <Grid item xs={12}>
+        <Grid
+          container
+          display='flex'
+          flexDirection={{ xs: "column", md: "row" }}
+          style={{ padding: "1rem" }}
+        >
+          <Grid item xs={8} md={6}>
             {data.map((d, index) => (
               <motion.div
                 transition={{ duration: 3 }}
@@ -81,7 +86,6 @@ const Contact = () => {
                 key={index}
               >
                 <Grid
-                  xs={12}
                   item
                   style={{
                     display: "block",
@@ -98,46 +102,48 @@ const Contact = () => {
               </motion.div>
             ))}
           </Grid>
-        </Grid>
-        <motion.div
-          transition={{ duration: 3 }}
-          initial={{ y: -1000 }}
-          animate={{ y: 0 }}
-        >
-          <form
-            ref={form}
-            className='form'
-            onSubmit={(handleSubmit(regForm), sendEmail)}
-            // style={{ background: "rgba(0, 0, 0, 0.3)" }}
-          >
-            <div className='textField'>
-              <InputLabel htmlFor='fullName' sx={{ color: "#fff" }}>
-                First Name
-              </InputLabel>
-              <Input
-                sx={{
-                  color: "#afafde",
-                  marginBottom: "1rem",
-                  border: "1px solid #5a5a8c ",
-                  padding: "0.7rem",
-                }}
-                size='normal'
-                fullWidth
-                color='secondary'
-                variant='standard'
-                label='fullName'
-                name='fullName'
-                id='fullName'
-                {...register("fullName", {
-                  required: "Full Name is required",
-                  minLength: 2,
-                })}
-              />
-              {errors.fullName && (
-                <p className='error'>{errors.fullName?.message}</p>
-              )}
-            </div>
-            {/* <div className='textField'>
+
+          <Grid item xs={12} md={6}>
+            <motion.div
+              transition={{ duration: 3 }}
+              initial={{ y: -1000 }}
+              animate={{ y: 0 }}
+            >
+              <form
+                ref={form}
+                className='form'
+                onSubmit={(handleSubmit(regForm), sendEmail)}
+                // style={{ background: "rgba(0, 0, 0, 0.3)" }}
+              >
+                <div className='textField'>
+                  <InputLabel htmlFor='fullName' sx={{ color: "#fff" }}>
+                    First Name
+                  </InputLabel>
+                  <Input
+                    sx={{
+                      color: "#afafde",
+                      marginBottom: "1rem",
+                      border: "1px solid #5a5a8c ",
+                      padding: "0.7rem",
+                    }}
+                    size='normal'
+                    fullWidth
+                    color='secondary'
+                    variant='standard'
+                    label='fullName'
+                    name='fullName'
+                    id='fullName'
+                    {...register("fullName", {
+                      required: "Full Name is required",
+                      minLength: 2,
+                    })}
+                  />
+                  {errors.fullName && (
+                    <p className='error'>{errors.fullName?.message}</p>
+                  )}
+                </div>
+
+                {/* <div className='textField'>
               <InputLabel htmlFor='lastName' sx={{ color: "#fff" }}>
                 Last Name
               </InputLabel>
@@ -164,7 +170,7 @@ const Contact = () => {
                 <p className='error'>{errors.lastName?.message}</p>
               )}
             </div> */}
-            {/* <div className='textField'>
+                {/* <div className='textField'>
               <InputLabel htmlFor='phone' sx={{ color: "#fff" }}>
                 Phone
               </InputLabel>
@@ -195,36 +201,38 @@ const Contact = () => {
               />
               {errors.phone && <p className='error'>{errors.phone?.message}</p>}
             </div> */}
-            <div className='textField'>
-              <InputLabel htmlFor='Email' sx={{ color: "#fff" }}>
-                Email
-              </InputLabel>
-              <Input
-                sx={{
-                  color: "#afafde",
-                  marginBottom: "1rem",
-                  border: "1px solid #5a5a8c ",
-                  padding: "0.7rem",
-                }}
-                size='normal'
-                fullWidth
-                variant='filled'
-                label='Email'
-                name='Email'
-                id='Email'
-                className='input'
-                color='primary'
-                {...register("Email", {
-                  required: "Email is required",
-                  pattern: {
-                    value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
-                    message: "incorrect email",
-                  },
-                })}
-              />
-              {errors.Email && <p className='error'>{errors.Email?.message}</p>}
-            </div>
-            {/* <div className='textField'>
+                <div className='textField'>
+                  <InputLabel htmlFor='Email' sx={{ color: "#fff" }}>
+                    Email
+                  </InputLabel>
+                  <Input
+                    sx={{
+                      color: "#afafde",
+                      marginBottom: "1rem",
+                      border: "1px solid #5a5a8c ",
+                      padding: "0.7rem",
+                    }}
+                    size='normal'
+                    fullWidth
+                    variant='filled'
+                    label='Email'
+                    name='Email'
+                    id='Email'
+                    className='input'
+                    color='primary'
+                    {...register("Email", {
+                      required: "Email is required",
+                      pattern: {
+                        value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                        message: "incorrect email",
+                      },
+                    })}
+                  />
+                  {errors.Email && (
+                    <p className='error'>{errors.Email?.message}</p>
+                  )}
+                </div>
+                {/* <div className='textField'>
               <InputLabel htmlFor='password' sx={{ color: "#fff" }}>
                 Password
               </InputLabel>
@@ -323,40 +331,42 @@ const Contact = () => {
             {errors.confirmPassword && (
               <p className='error'>{errors.confirmPassword?.message}</p>
             )} */}
-            <div className='textField'>
-              <InputLabel htmlFor='messages' sx={{ color: "#fff" }}>
-                Message
-              </InputLabel>
-              <Input
-                sx={{
-                  color: "#afafde",
-                  marginBottom: "1rem",
-                  border: "1px solid #5a5a8c ",
-                  padding: "0.7rem",
-                }}
-                size='normal'
-                variant='filled'
-                fullWidth
-                label='Your Message'
-                multiline
-                minRows={5}
-                name='message'
-                id='messages'
-                className='input message'
-                color='primary'
-                {...register("message", {
-                  required: "Please input your message",
-                })}
-              />
-              {errors.messages && (
-                <p className='error'>{errors.messages?.message}</p>
-              )}
-            </div>
-            <Button variant='contained' className='btn' type='submit'>
-              Submit
-            </Button>
-          </form>
-        </motion.div>
+                <div className='textField'>
+                  <InputLabel htmlFor='messages' sx={{ color: "#fff" }}>
+                    Message
+                  </InputLabel>
+                  <Input
+                    sx={{
+                      color: "#afafde",
+                      marginBottom: "1rem",
+                      border: "1px solid #5a5a8c ",
+                      padding: "0.7rem",
+                    }}
+                    size='normal'
+                    variant='filled'
+                    fullWidth
+                    label='Your Message'
+                    multiline
+                    minRows={5}
+                    name='message'
+                    id='messages'
+                    className='input message'
+                    color='primary'
+                    {...register("message", {
+                      required: "Please input your message",
+                    })}
+                  />
+                  {errors.messages && (
+                    <p className='error'>{errors.messages?.message}</p>
+                  )}
+                </div>
+                <Button variant='contained' className='btn' type='submit'>
+                  Submit
+                </Button>
+              </form>
+            </motion.div>
+          </Grid>
+        </Grid>
       </div>
     </motion.section>
   );

@@ -1,24 +1,22 @@
-.primary__container {
+/* .primary__container {
   margin-left: 2rem;
   display: Grid;
   grid-template-columns: 40% 60%;
   grid-gap: 1rem;
-}
+} */
+
 .contact__media {
   background: rgba(0, 0, 0, 0.3);
   color: var(--color-white);
   margin-bottom: 3rem;
-  text-align: center;
   height: max-content;
   display: flex;
   justify-content: center;
-  /* padding-left: 1rem;
-  padding-right: 2rem; */
   padding: 1rem;
   border-radius: 2rem;
   backdrop-filter: blur(15px);
   border-radius: 2rem;
-  width: 100%;
+  width: 30vw;
 }
 
 .contact__media:hover {

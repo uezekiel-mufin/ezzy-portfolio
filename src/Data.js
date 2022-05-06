@@ -6,17 +6,17 @@ const Data = [
   {
     icon: <WorkHistoryIcon />,
     h5: "Experience",
-    small: "3+ Years",
+    small: "1+ Years",
   },
   {
     icon: <PeopleIcon className='about__icon' />,
     h5: "Clients",
-    small: "80+",
+    small: "2+",
   },
   {
     icon: <FolderIcon className='about__icon' />,
     h5: "Projects",
-    small: "50+",
+    small: "20+",
   },
 ];
 

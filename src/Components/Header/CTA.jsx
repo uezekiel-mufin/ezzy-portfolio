@@ -6,7 +6,12 @@ import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
-    <div className='cta'>
+    <motion.div
+      transition={{ duration: 3 }}
+      initial={{ y: -1000 }}
+      animate={{ y: 0 }}
+      className='cta'
+    >
       <motion.div>
         <Button variant='outlined' href={CV} download className='btn'>
           Download CV
@@ -23,7 +28,7 @@ const CTA = () => {
           Let's Talk
         </Button>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

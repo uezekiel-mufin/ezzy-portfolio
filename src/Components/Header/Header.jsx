@@ -36,7 +36,7 @@ const Header = () => {
           // justifyContent='center'
           spacing={1}
           flexDirection='row'
-          style={{ padding: "5rem", marginTop: "3rem" }}
+          style={{ marginTop: "3rem", padding: "5rem 0 0 3.5rem" }}
         >
           <Grid
             item
@@ -44,20 +44,20 @@ const Header = () => {
             display='grid'
             flexDirection='column'
             justifyContent='center'
-            style={{ margin: "5rem 0 0 3rem" }}
+            style={{ width: "fitContent" }}
             sm={6}
           >
             <motion.h5
               transition={{ duration: 3 }}
-              initial={{ x: 1000 }}
-              animate={{ x: 0, y: -30 }}
+              initial={{ y: 1000 }}
+              animate={{ y: -30, scale: 2 }}
             >
               Welcome
             </motion.h5>
             <motion.h5
               transition={{ duration: 3 }}
-              initial={{ x: 1000 }}
-              animate={{ x: 0, y: -30 }}
+              initial={{ y: 1000 }}
+              animate={{ y: -30 }}
             >
               My name is
             </motion.h5>
@@ -70,7 +70,7 @@ const Header = () => {
             </motion.h2>
             <motion.h5
               transition={{ duration: 3 }}
-              initial={{ x: 1000 }}
+              initial={{ x: -1000 }}
               animate={{ x: 0, scale: 1.5 }}
             >
               A Front-End Web Developer
@@ -80,7 +80,12 @@ const Header = () => {
           <Grid
             item
             display='flex'
-            flexDirection={{ xs: "row", sm: "column", lg: "column" }}
+            flexDirection={{
+              xs: "row",
+              sm: "column",
+              md: "column",
+              lg: "column",
+            }}
             justifyContent='center'
             style={{ margin: "0 0 0 5rem" }}
             // sm={6}
