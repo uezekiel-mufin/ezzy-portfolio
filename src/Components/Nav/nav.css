@@ -34,7 +34,7 @@ nav a.active {
   nav {
     left: 50%;
     right: 50%;
-    top: 80%;
+    top: 80vw;
   }
 
   nav a {

@@ -1,59 +1,59 @@
 import React from "react";
-import img1 from "../../assests/img1.webp";
-import img2 from "../../assests/img2.webp";
-import img3 from "../../assests/img3.webp";
-import img4 from "../../assests/img4.webp";
-import img5 from "../../assests/img5.webp";
-import img6 from "../../assests/img6.webp";
+import img1 from "../../assests/ecommerce.jpg";
+import img2 from "../../assests/forkify.jpg";
+import img3 from "../../assests/bankist.jpg";
+import img4 from "../../assests/slider2.jpg";
+import img5 from "../../assests/tours.jpg";
+import img6 from "../../assests/stripejs.jpg";
 
 const data = [
   {
     image: img1,
-    name: "project1",
+    name: "ECommerce",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, vitae.",
-    gitHub: "https://github.com",
-    liveDemo: "https://netlify.com",
+      "Ezzy Commerce is an online store built on commercejs, where users can purchase goods locally and internationally",
+    gitHub: "https://github.com/Ezzywealth/Ecommerce-ezzy",
+    liveDemo: "https://commerce-ezzy.netlify.app/",
   },
   {
     image: img2,
-    name: "project2",
+    name: "Forkify",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, vitae.",
-    gitHub: "https://github.com",
-    liveDemo: "https://netlify.com",
+      "Forkify is a web app where users can search for recipe and cooking methods for different types of food",
+    gitHub: "https://github.com/Ezzywealth/Forkify-Ezekiel",
+    liveDemo: "https://forkify-ezekiel.netlify.app/",
   },
   {
     image: img3,
-    name: "project3",
+    name: "Bankist",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, vitae.",
-    gitHub: "https://github.com",
-    liveDemo: "https://netlify.com",
+      "Bankist is an online banking web application, which gives users a memorable experience in financial transactions",
+    gitHub: "https://github.com/Ezzywealth/Bankist-Ezekiel",
+    liveDemo: "https://bankist-site-ezekiel.netlify.app/",
   },
   {
     image: img4,
-    name: "project4",
+    name: "Slider",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, vitae.",
-    gitHub: "https://github.com",
-    liveDemo: "https://netlify.com",
+      "A mini web application to show how to impliment the slider functionality in ReactJs",
+    gitHub: "https://github.com/Ezzywealth/slider-reactjs",
+    liveDemo: "https://slider-ezzy.netlify.app/",
   },
   {
     image: img5,
-    name: "project5",
+    name: "City-tour",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, vitae.",
-    gitHub: "https://github.com",
-    liveDemo: "https://netlify.com",
+      "City-tour is a web application that displays a list of beautiful cities and some details about them",
+    gitHub: "https://github.com/Ezzywealth/tours",
+    liveDemo: "https://ezzy-city-tours.netlify.app/",
   },
   {
     image: img6,
-    name: "project6",
+    name: "StripeHP",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, vitae.",
-    gitHub: "https://github.com",
-    liveDemo: "https://netlify.com",
+      "StripeHP is a simple webpage that displays the homepage of stripe",
+    gitHub: "https://github.com/Ezzywealth/stripe-submenu-ezzy",
+    liveDemo: "https://ezzy-stripe.netlify.app/",
   },
 ];
 

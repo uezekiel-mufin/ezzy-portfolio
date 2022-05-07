@@ -61,7 +61,7 @@ const Header = () => {
             <motion.h2
               transition={{ duration: 3 }}
               initial={{ x: 1000 }}
-              animate={{ x: 60, scale: 2.5 }}
+              animate={{ x: 50, scale: 1.5 }}
             >
               Ezekiel Udiomuno
             </motion.h2>
