@@ -6,7 +6,7 @@ import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import { Button, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import "./about.css";
-import Data from "../../Data";
+import Data from "./Data";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 

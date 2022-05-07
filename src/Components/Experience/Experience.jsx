@@ -49,7 +49,7 @@ const Experience = () => {
                 className='experience__skills'
                 transition={{ duration: 2 }}
                 initial={{ x: 1000 }}
-                animate={{ x: 0, rotateX: 360 }}
+                animate={{ x: 0 }}
               >
                 <Typography className='typography' variant='h3'>
                   FrontEnd
@@ -103,7 +103,7 @@ const Experience = () => {
                 className='experience__skills'
                 transition={{ duration: 2 }}
                 initial={{ x: -1000 }}
-                animate={{ x: 0, rotateX: 360 }}
+                animate={{ x: 0 }}
               >
                 <Typography variant='h3' className='typography'>
                   BackEnd

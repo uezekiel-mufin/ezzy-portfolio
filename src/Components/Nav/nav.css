@@ -5,11 +5,11 @@ nav {
   position: fixed;
   left: 5%;
   transform: translate(-50%);
-  bottom: 30%;
-  display: column;
+  top: 20%;
   gap: 0.8rem;
   border-radius: 3rem;
   backdrop-filter: blur(15px);
+  /* margin-top: 5rem; */
 }
 
 nav a {
@@ -28,4 +28,17 @@ nav a:hover {
 nav a.active {
   background: var(--color-bg);
   color: var(--color-white);
+}
+
+@media only screen and (max-width: 800px) {
+  nav {
+    left: 50%;
+    right: 50%;
+    top: 80%;
+  }
+
+  nav a {
+    display: inline-block;
+  }
+  /*Tablets [601px -> 1200px]*/
 }

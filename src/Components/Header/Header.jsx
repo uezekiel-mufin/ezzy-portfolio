@@ -1,13 +1,12 @@
 import React from "react";
 import "./header.css";
 import CTA from "./CTA";
-// import HeadersSocials from "./HeadersSocials";
 import { motion } from "framer-motion";
-import { ThemeProvider, createTheme, Grid, Button } from "@mui/material";
+import { ThemeProvider, createTheme, Grid } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { Link } from "react-router-dom";
+
 const theme = createTheme({
   palette: {
     background: {
@@ -33,7 +32,6 @@ const Header = () => {
         <Grid
           container
           display='flex'
-          // justifyContent='center'
           spacing={1}
           flexDirection='row'
           style={{ marginTop: "3rem", padding: "5rem 0 0 3.5rem" }}
@@ -45,26 +43,25 @@ const Header = () => {
             flexDirection='column'
             justifyContent='center'
             style={{ width: "fitContent" }}
-            sm={6}
           >
             <motion.h5
               transition={{ duration: 3 }}
               initial={{ y: 1000 }}
-              animate={{ y: -30, scale: 2 }}
+              animate={{ y: -30, x: 50, scale: 2 }}
             >
               Welcome
             </motion.h5>
             <motion.h5
               transition={{ duration: 3 }}
               initial={{ y: 1000 }}
-              animate={{ y: -30 }}
+              animate={{ y: -30, x: 50 }}
             >
               My name is
             </motion.h5>
             <motion.h2
               transition={{ duration: 3 }}
               initial={{ x: 1000 }}
-              animate={{ x: 0, scale: 2.5 }}
+              animate={{ x: 60, scale: 2.5 }}
             >
               Ezekiel Udiomuno
             </motion.h2>
