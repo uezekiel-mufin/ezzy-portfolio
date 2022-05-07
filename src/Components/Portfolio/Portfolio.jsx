@@ -26,7 +26,7 @@ const Portfolio = () => {
         <motion.h2
           transition={{ duration: 3 }}
           initial={{ x: 1000 }}
-          animate={{ x: 0 }}
+          animate={{ x: 0, scale: 2 }}
         >
           Portfolio
         </motion.h2>
