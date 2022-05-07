@@ -1,18 +1,14 @@
 .container {
   margin-left: 2rem;
-  /* grid-template-columns: 40% 60%;
-  grid-gap: 1rem; */
 }
 
 .contact__media {
-  /* background: rgba(0, 0, 0, 0.3); */
   color: var(--color-white);
   height: max-content;
   width: 50%;
   display: column;
   justify-content: space-around;
   padding: 1rem;
-  /* backdrop-filter: blur(15px); */
   border-radius: 2rem;
 }
 
@@ -23,9 +19,7 @@
 
 .form {
   display: flex;
-  /* margin-right: 2rem; */
   flex-direction: column;
-  /* margin-left: 1rem; */
   padding: 2rem;
 }
 

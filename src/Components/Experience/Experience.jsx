@@ -1,9 +1,8 @@
 import { Grid, Typography } from "@mui/material";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import FrontEnd from "./frontEnd";
 import BackEnd from "./BackEnd";
 import CheckIcon from "@mui/icons-material/Check";
-// import CheckCircleOutlineRoundedIcon from "@mui/icons-material/CheckCircleOutlineRounded";
 import "./experience.css";
 import { useIntersectionObserver } from "react-intersection-observer-hook";
 import { AnimatePresence, motion } from "framer-motion";

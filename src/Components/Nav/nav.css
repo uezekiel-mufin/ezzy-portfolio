@@ -9,7 +9,6 @@ nav {
   gap: 0.8rem;
   border-radius: 3rem;
   backdrop-filter: blur(15px);
-  /* margin-top: 5rem; */
 }
 
 nav a {
@@ -40,5 +39,4 @@ nav a.active {
   nav a {
     display: inline-block;
   }
-  /*Tablets [601px -> 1200px]*/
 }

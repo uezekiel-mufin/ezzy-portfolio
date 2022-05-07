@@ -85,7 +85,6 @@ const Header = () => {
             }}
             justifyContent='center'
             style={{ margin: "0 0 0 5rem" }}
-            // sm={6}
           >
             <a
               href='https://linkedin.com'

@@ -1,27 +1,15 @@
-import { Button, Grid, Input, InputLabel, Typography } from "@mui/material";
+import { Button, Grid, Input, InputLabel } from "@mui/material";
 import React, { useState, useRef } from "react";
 import data from "./data";
 import "./contact.css";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
-import InputAdornment from "@mui/material/InputAdornment";
-import IconButton from "@mui/material/IconButton";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const [noPassword, setNoPassword] = useState(true);
-  const [value, setValue] = useState("");
-  console.log(value);
-
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
   const {
     handleSubmit,
     register,
-    getValues,
     reset,
     formState: { errors },
   } = useForm({
@@ -120,7 +108,6 @@ const Contact = () => {
               ref={form}
               className='form'
               onSubmit={(handleSubmit(regForm), sendEmail)}
-              // style={{ background: "rgba(0, 0, 0, 0.3)" }}
             >
               <div className='textField'>
                 <InputLabel htmlFor='fullName' sx={{ color: "#fff" }}>
@@ -150,64 +137,6 @@ const Contact = () => {
                 )}
               </div>
 
-              {/* <div className='textField'>
-              <InputLabel htmlFor='lastName' sx={{ color: "#fff" }}>
-                Last Name
-              </InputLabel>
-              <Input
-                sx={{
-                  color: "#afafde",
-                  marginBottom: "1rem",
-                  border: "1px solid #5a5a8c ",
-                  padding: "0.7rem",
-                }}
-                size='normal'
-                fullWidth
-                color='secondary'
-                variant='filled'
-                label='lastName'
-                name='lastName'
-                id='lastName'
-                {...register("lastName", {
-                  required: "Last Name is required",
-                  minLength: 2,
-                })}
-              />
-              {errors.lastName && (
-                <p className='error'>{errors.lastName?.message}</p>
-              )}
-            </div> */}
-              {/* <div className='textField'>
-              <InputLabel htmlFor='phone' sx={{ color: "#fff" }}>
-                Phone
-              </InputLabel>
-              <Input
-                sx={{
-                  color: "#afafde",
-                  marginBottom: "1rem",
-                  border: "1px solid #5a5a8c ",
-                  padding: "0.7rem",
-                }}
-                size='normal'
-                fullWidth
-                type='number'
-                color='secondary'
-                variant='filled'
-                label='phone'
-                name='phone'
-                id='phone'
-                {...register("phone", {
-                  required: "Phone number is required",
-                  minLength: 11,
-                  pattern: {
-                    value:
-                      /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,9}$/,
-                    message: "Please enter a valid phone number",
-                  },
-                })}
-              />
-              {errors.phone && <p className='error'>{errors.phone?.message}</p>}
-            </div> */}
               <div className='textField'>
                 <InputLabel htmlFor='Email' sx={{ color: "#fff" }}>
                   Email
@@ -239,105 +168,7 @@ const Contact = () => {
                   <p className='error'>{errors.Email?.message}</p>
                 )}
               </div>
-              {/* <div className='textField'>
-              <InputLabel htmlFor='password' sx={{ color: "#fff" }}>
-                Password
-              </InputLabel>
-              <Input
-                sx={{
-                  color: "#afafde",
-                  marginBottom: "1rem",
-                  border: "1px solid #5a5a8c ",
-                  padding: "0.7rem",
-                }}
-                size='normal'
-                fullWidth
-                type={noPassword ? "password" : "text"}
-                color='secondary'
-                variant='filled'
-                // value={value}
-                label='password'
-                name='password'
-                id='password'
-                onChange={(e) => setValue(e.target.value)}
-                endAdornment={
-                  <InputAdornment position='end'>
-                    <IconButton
-                      aria-label='toggle password visibility'
-                      onClick={() => setNoPassword((prev) => !prev)}
-                      onMouseDown={handleMouseDownPassword}
-                      edge='end'
-                      sx={{ color: "#fff" }}
-                    >
-                      {noPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                  </InputAdornment>
-                }
-                {...register("password", {
-                  required: "Password is required",
-                  minLength: {
-                    value: 8,
-                    message: "password must not be less than 8 characters",
-                  },
-                  // pattern: {
-                  //   value: ,
-                  //   message:
-                  //     "password must contain Uppercase, lowercase,number",
-                  // },
-                })}
-              />
-              {errors.password && (
-                <p className='error'>{errors.password?.message}</p>
-              )}
-            </div>
-            <div className='textField'>
-              <InputLabel htmlFor='confirmPassword' sx={{ color: "#fff" }}>
-                Confirm Password
-              </InputLabel>
-              <Input
-                sx={{
-                  color: "#afafde",
-                  marginBottom: "1rem",
-                  border: "1px solid #5a5a8c ",
-                  padding: "0.7rem",
-                }}
-                size='normal'
-                fullWidth
-                type={noPassword ? "password" : "text"}
-                color='secondary'
-                variant='filled'
-                label='confirmPassword'
-                name='confirmPassword'
-                id='confirmPassword'
-                // value={value}
-                onChange={(e) => setValue(e.target.value)}
-                endAdornment={
-                  <InputAdornment position='end'>
-                    <IconButton
-                      aria-label='toggle password visibility'
-                      onClick={() => setNoPassword((prev) => !prev)}
-                      onMouseDown={handleMouseDownPassword}
-                      edge='end'
-                      sx={{ color: "#fff" }}
-                    >
-                      {noPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                  </InputAdornment>
-                }
-                {...register("confirmPassword", {
-                  required: "input a password",
-                  validate: {
-                    checkPassword: (value) => {
-                      const { password } = getValues();
-                      return password === value || "Password do not match";
-                    },
-                  },
-                })}
-              />
-            </div>
-            {errors.confirmPassword && (
-              <p className='error'>{errors.confirmPassword?.message}</p>
-            )} */}
+
               <div className='textField'>
                 <InputLabel htmlFor='messages' sx={{ color: "#fff" }}>
                   Message
